@@ -142,7 +142,9 @@ void pushInt(struct IntNode **top, int val) {
 }
 
 int popInt(struct IntNode **top) {
-    if (*top == NULL) return 0;
+    if (*top == NULL) 
+        return 0;
+        
     struct IntNode *temp = *top;
     int val = temp->data;
     *top = temp->next;
@@ -171,7 +173,7 @@ int evalPostfix(char postfix[]) {
     }
     return popInt(&stack);
 }
-
+    
 // Main
 int main() {
     int choice;

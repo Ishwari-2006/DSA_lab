@@ -110,8 +110,7 @@ void R_Postorder(struct node *root)
         R_Postorder(root->left);        
         R_Postorder(root->right);
         printf("%c ",root->data);
-    }
-    
+    }   
 }
 
 void NR_Inorder(struct node *root)
@@ -126,7 +125,6 @@ void NR_Inorder(struct node *root)
             push(&stack,curr);
             curr=curr->left;
         }
-
         curr=pop(&stack);
         printf("%c ",curr->data);
         curr=curr->right;
@@ -188,8 +186,6 @@ void NR_Postorder(struct node *root)
         
     }
 }
-
-
 
 int main()
 {

@@ -4,21 +4,16 @@
 struct tree
 {
     int data;
-
     struct tree *left;
-
     struct tree *right;
 };
 
 void create(struct tree **froot, int fnum)
 {
-
     if (*froot == NULL)
     {
         struct tree *newnode = (struct tree *)calloc(1, sizeof(struct tree));
-
         newnode->data = fnum;
-
         *froot = newnode;
 
         return;
@@ -26,7 +21,6 @@ void create(struct tree **froot, int fnum)
 
     if (fnum < (*froot)->data)
     {
-
         create(&(*froot)->left, fnum);
     }
 
